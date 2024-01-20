@@ -10,7 +10,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url('/assets/images/image-1.svg');
+    background-image: url('/login.jpg');
   }
 
   p {
@@ -20,7 +20,7 @@
 
 .formTitle {
   display: flex;
-  align-items: center;
+  justify-content: center;
   gap: 16px;
   width: 100%;
 
@@ -41,7 +41,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url('/assets/images/image-1.svg');
+  background-image: url('/login.jpg');
 
   @include mid-break {
     background: none;
@@ -50,17 +50,7 @@
   }
 }
 
-.logo {
-  margin: 60px;
-  width: 30%;
-  min-width: 150px;
-  z-index: 10;
 
-  @include mid-break {
-    width: 45%;
-    margin: 10px;
-  }
-}
 
 .formWrapper {
   display: flex;
@@ -81,10 +71,11 @@
   width: 100%;
   padding: 50px;
   border-radius: 10px;
+  
 
   @include mid-break {
     backdrop-filter: blur(30px);
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(243, 243, 243, 0.9);
     box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   }
 
