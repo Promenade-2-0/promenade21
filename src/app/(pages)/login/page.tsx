@@ -24,7 +24,9 @@ export default async function Login() {
           <RenderParams className={classes.params} />
 
           <div className={classes.formTitle}>
-            <Image src="/logo.png" alt="hand" width={200} height={30} />
+            <Link href="/">
+              <Image src="/logo.png" alt="hand" width={200} height={30} />
+            </Link>
           </div>
           <LoginForm />
         </div>
