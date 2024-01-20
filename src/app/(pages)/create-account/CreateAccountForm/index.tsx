@@ -14,6 +14,7 @@ import classes from './index.module.scss'
 
 type FormData = {
   name: string
+  age: string
   email: string
   password: string
   passwordConfirm: string
@@ -26,6 +27,17 @@ const CreateAccountForm: React.FC = () => {
   const router = useRouter()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+
+  const calculateAge = (birthDate: string | number | Date) => {
+    const today = new Date()
+    const birth = new Date(birthDate)
+    let age = today.getFullYear() - birth.getFullYear()
+    const m = today.getMonth() - birth.getMonth()
+    if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) {
+      age--
+    }
+    return age
+  }
 
   const {
     register,
@@ -91,6 +103,15 @@ const CreateAccountForm: React.FC = () => {
         register={register}
         error={errors.name}
         type="text"
+      />
+      <Input
+        name="age"
+        label="Birth Date"
+        required
+        register={register}
+        error={errors.age}
+        validate={value => calculateAge(value) >= 21 || 'You must be at least 21 years old'}
+        type="date"
       />
       <Input
         name="password"
