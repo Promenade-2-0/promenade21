@@ -4134,6 +4134,12 @@ type Order {
 type User {
   id: String
   name: String
+  age: DateTime
+  address: String
+  address2: String
+  city: String
+  zipcode: String
+  phonenumber: String
   roles: [User_roles!]
   purchases: [Product!]
   stripeCustomerID: String
@@ -5510,6 +5516,12 @@ type Users {
 
 input User_where {
   name: User_name_operator
+  age: User_age_operator
+  address: User_address_operator
+  address2: User_address2_operator
+  city: User_city_operator
+  zipcode: User_zipcode_operator
+  phonenumber: User_phonenumber_operator
   roles: User_roles_operator
   purchases: User_purchases_operator
   stripeCustomerID: User_stripeCustomerID_operator
@@ -5526,6 +5538,72 @@ input User_where {
 }
 
 input User_name_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input User_age_operator {
+  equals: DateTime
+  not_equals: DateTime
+  greater_than_equal: DateTime
+  greater_than: DateTime
+  less_than_equal: DateTime
+  less_than: DateTime
+  like: DateTime
+  exists: Boolean
+}
+
+input User_address_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input User_address2_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input User_city_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input User_zipcode_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input User_phonenumber_operator {
   equals: String
   not_equals: String
   like: String
@@ -5651,6 +5729,12 @@ input User_id_operator {
 
 input User_where_and {
   name: User_name_operator
+  age: User_age_operator
+  address: User_address_operator
+  address2: User_address2_operator
+  city: User_city_operator
+  zipcode: User_zipcode_operator
+  phonenumber: User_phonenumber_operator
   roles: User_roles_operator
   purchases: User_purchases_operator
   stripeCustomerID: User_stripeCustomerID_operator
@@ -5668,6 +5752,12 @@ input User_where_and {
 
 input User_where_or {
   name: User_name_operator
+  age: User_age_operator
+  address: User_address_operator
+  address2: User_address2_operator
+  city: User_city_operator
+  zipcode: User_zipcode_operator
+  phonenumber: User_phonenumber_operator
   roles: User_roles_operator
   purchases: User_purchases_operator
   stripeCustomerID: User_stripeCustomerID_operator
@@ -5694,6 +5784,12 @@ type usersDocAccess {
 
 type UsersDocAccessFields {
   name: UsersDocAccessFields_name
+  age: UsersDocAccessFields_age
+  address: UsersDocAccessFields_address
+  address2: UsersDocAccessFields_address2
+  city: UsersDocAccessFields_city
+  zipcode: UsersDocAccessFields_zipcode
+  phonenumber: UsersDocAccessFields_phonenumber
   roles: UsersDocAccessFields_roles
   purchases: UsersDocAccessFields_purchases
   stripeCustomerID: UsersDocAccessFields_stripeCustomerID
@@ -5725,6 +5821,144 @@ type UsersDocAccessFields_name_Update {
 }
 
 type UsersDocAccessFields_name_Delete {
+  permission: Boolean!
+}
+
+type UsersDocAccessFields_age {
+  create: UsersDocAccessFields_age_Create
+  read: UsersDocAccessFields_age_Read
+  update: UsersDocAccessFields_age_Update
+  delete: UsersDocAccessFields_age_Delete
+}
+
+type UsersDocAccessFields_age_Create {
+  permission: Boolean!
+}
+
+type UsersDocAccessFields_age_Read {
+  permission: Boolean!
+}
+
+type UsersDocAccessFields_age_Update {
+  permission: Boolean!
+}
+
+type UsersDocAccessFields_age_Delete {
+  permission: Boolean!
+}
+
+type UsersDocAccessFields_address {
+  create: UsersDocAccessFields_address_Create
+  read: UsersDocAccessFields_address_Read
+  update: UsersDocAccessFields_address_Update
+  delete: UsersDocAccessFields_address_Delete
+}
+
+type UsersDocAccessFields_address_Create {
+  permission: Boolean!
+}
+
+type UsersDocAccessFields_address_Read {
+  permission: Boolean!
+}
+
+type UsersDocAccessFields_address_Update {
+  permission: Boolean!
+}
+
+type UsersDocAccessFields_address_Delete {
+  permission: Boolean!
+}
+
+type UsersDocAccessFields_address2 {
+  create: UsersDocAccessFields_address2_Create
+  read: UsersDocAccessFields_address2_Read
+  update: UsersDocAccessFields_address2_Update
+  delete: UsersDocAccessFields_address2_Delete
+}
+
+type UsersDocAccessFields_address2_Create {
+  permission: Boolean!
+}
+
+type UsersDocAccessFields_address2_Read {
+  permission: Boolean!
+}
+
+type UsersDocAccessFields_address2_Update {
+  permission: Boolean!
+}
+
+type UsersDocAccessFields_address2_Delete {
+  permission: Boolean!
+}
+
+type UsersDocAccessFields_city {
+  create: UsersDocAccessFields_city_Create
+  read: UsersDocAccessFields_city_Read
+  update: UsersDocAccessFields_city_Update
+  delete: UsersDocAccessFields_city_Delete
+}
+
+type UsersDocAccessFields_city_Create {
+  permission: Boolean!
+}
+
+type UsersDocAccessFields_city_Read {
+  permission: Boolean!
+}
+
+type UsersDocAccessFields_city_Update {
+  permission: Boolean!
+}
+
+type UsersDocAccessFields_city_Delete {
+  permission: Boolean!
+}
+
+type UsersDocAccessFields_zipcode {
+  create: UsersDocAccessFields_zipcode_Create
+  read: UsersDocAccessFields_zipcode_Read
+  update: UsersDocAccessFields_zipcode_Update
+  delete: UsersDocAccessFields_zipcode_Delete
+}
+
+type UsersDocAccessFields_zipcode_Create {
+  permission: Boolean!
+}
+
+type UsersDocAccessFields_zipcode_Read {
+  permission: Boolean!
+}
+
+type UsersDocAccessFields_zipcode_Update {
+  permission: Boolean!
+}
+
+type UsersDocAccessFields_zipcode_Delete {
+  permission: Boolean!
+}
+
+type UsersDocAccessFields_phonenumber {
+  create: UsersDocAccessFields_phonenumber_Create
+  read: UsersDocAccessFields_phonenumber_Read
+  update: UsersDocAccessFields_phonenumber_Update
+  delete: UsersDocAccessFields_phonenumber_Delete
+}
+
+type UsersDocAccessFields_phonenumber_Create {
+  permission: Boolean!
+}
+
+type UsersDocAccessFields_phonenumber_Read {
+  permission: Boolean!
+}
+
+type UsersDocAccessFields_phonenumber_Update {
+  permission: Boolean!
+}
+
+type UsersDocAccessFields_phonenumber_Delete {
   permission: Boolean!
 }
 
@@ -9483,6 +9717,12 @@ type usersAccess {
 
 type UsersFields {
   name: UsersFields_name
+  age: UsersFields_age
+  address: UsersFields_address
+  address2: UsersFields_address2
+  city: UsersFields_city
+  zipcode: UsersFields_zipcode
+  phonenumber: UsersFields_phonenumber
   roles: UsersFields_roles
   purchases: UsersFields_purchases
   stripeCustomerID: UsersFields_stripeCustomerID
@@ -9514,6 +9754,144 @@ type UsersFields_name_Update {
 }
 
 type UsersFields_name_Delete {
+  permission: Boolean!
+}
+
+type UsersFields_age {
+  create: UsersFields_age_Create
+  read: UsersFields_age_Read
+  update: UsersFields_age_Update
+  delete: UsersFields_age_Delete
+}
+
+type UsersFields_age_Create {
+  permission: Boolean!
+}
+
+type UsersFields_age_Read {
+  permission: Boolean!
+}
+
+type UsersFields_age_Update {
+  permission: Boolean!
+}
+
+type UsersFields_age_Delete {
+  permission: Boolean!
+}
+
+type UsersFields_address {
+  create: UsersFields_address_Create
+  read: UsersFields_address_Read
+  update: UsersFields_address_Update
+  delete: UsersFields_address_Delete
+}
+
+type UsersFields_address_Create {
+  permission: Boolean!
+}
+
+type UsersFields_address_Read {
+  permission: Boolean!
+}
+
+type UsersFields_address_Update {
+  permission: Boolean!
+}
+
+type UsersFields_address_Delete {
+  permission: Boolean!
+}
+
+type UsersFields_address2 {
+  create: UsersFields_address2_Create
+  read: UsersFields_address2_Read
+  update: UsersFields_address2_Update
+  delete: UsersFields_address2_Delete
+}
+
+type UsersFields_address2_Create {
+  permission: Boolean!
+}
+
+type UsersFields_address2_Read {
+  permission: Boolean!
+}
+
+type UsersFields_address2_Update {
+  permission: Boolean!
+}
+
+type UsersFields_address2_Delete {
+  permission: Boolean!
+}
+
+type UsersFields_city {
+  create: UsersFields_city_Create
+  read: UsersFields_city_Read
+  update: UsersFields_city_Update
+  delete: UsersFields_city_Delete
+}
+
+type UsersFields_city_Create {
+  permission: Boolean!
+}
+
+type UsersFields_city_Read {
+  permission: Boolean!
+}
+
+type UsersFields_city_Update {
+  permission: Boolean!
+}
+
+type UsersFields_city_Delete {
+  permission: Boolean!
+}
+
+type UsersFields_zipcode {
+  create: UsersFields_zipcode_Create
+  read: UsersFields_zipcode_Read
+  update: UsersFields_zipcode_Update
+  delete: UsersFields_zipcode_Delete
+}
+
+type UsersFields_zipcode_Create {
+  permission: Boolean!
+}
+
+type UsersFields_zipcode_Read {
+  permission: Boolean!
+}
+
+type UsersFields_zipcode_Update {
+  permission: Boolean!
+}
+
+type UsersFields_zipcode_Delete {
+  permission: Boolean!
+}
+
+type UsersFields_phonenumber {
+  create: UsersFields_phonenumber_Create
+  read: UsersFields_phonenumber_Read
+  update: UsersFields_phonenumber_Update
+  delete: UsersFields_phonenumber_Delete
+}
+
+type UsersFields_phonenumber_Create {
+  permission: Boolean!
+}
+
+type UsersFields_phonenumber_Read {
+  permission: Boolean!
+}
+
+type UsersFields_phonenumber_Update {
+  permission: Boolean!
+}
+
+type UsersFields_phonenumber_Delete {
   permission: Boolean!
 }
 
@@ -11179,6 +11557,12 @@ input mutationCategoryUpdate_BreadcrumbsInput {
 
 input mutationUserInput {
   name: String
+  age: String
+  address: String
+  address2: String
+  city: String
+  zipcode: String
+  phonenumber: String
   roles: [User_roles_MutationInput]
   purchases: [String]
   stripeCustomerID: String
@@ -11213,6 +11597,12 @@ input mutationUser_Cart_ItemsInput {
 
 input mutationUserUpdateInput {
   name: String
+  age: String
+  address: String
+  address2: String
+  city: String
+  zipcode: String
+  phonenumber: String
   roles: [UserUpdate_roles_MutationInput]
   purchases: [String]
   stripeCustomerID: String

@@ -406,6 +406,12 @@ export interface Order {
 export interface User {
   id: string;
   name?: string | null;
+  age?: string | null;
+  address?: string | null;
+  address2?: string | null;
+  city?: string | null;
+  zipcode?: string | null;
+  phonenumber?: string | null;
   roles?: ('admin' | 'customer')[] | null;
   purchases?: (string | Product)[] | null;
   stripeCustomerID?: string | null;
@@ -501,7 +507,6 @@ export interface Footer {
   navItems?:
     | {
         link: {
-          icon: Media;
           type?: ('reference' | 'custom') | null;
           newTab?: boolean | null;
           reference?: {

@@ -47,6 +47,30 @@ const Users: CollectionConfig = {
       type: 'text',
     },
     {
+      name: 'age',
+      type: 'date',
+    },
+    {
+      name: 'address',
+      type: 'text',
+    },
+    {
+      name: 'address2',
+      type: 'text',
+    },
+    {
+      name: 'city',
+      type: 'text',
+    },
+    {
+      name: 'zipcode',
+      type: 'text',
+    },
+    {
+      name: 'phonenumber',
+      type: 'text',
+    },
+    {
       name: 'roles',
       type: 'select',
       hasMany: true,
