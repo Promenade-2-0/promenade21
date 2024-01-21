@@ -29,7 +29,11 @@ export default async function CreateAccount() {
             <h3>Create Account</h3>
           </div>
 
-          <p>Please enter details</p>
+          <p>
+            Free account signup lets you review order history and reorder your favorite items with a
+            single click. Best of all, signing up takes less time than uncorking your favorite
+            bottle
+          </p>
 
           <CreateAccountForm />
         </div>

@@ -18,6 +18,11 @@ type FormData = {
   email: string
   password: string
   passwordConfirm: string
+  address: string
+  address2: string
+  city: string
+  zipcode: number
+  phonenumber: number
 }
 
 const CreateAccountForm: React.FC = () => {
@@ -97,6 +102,14 @@ const CreateAccountForm: React.FC = () => {
         type="email"
       />
       <Input
+        name="phonenumber"
+        label="Phone #"
+        required
+        register={register}
+        error={errors.phonenumber}
+        type="text"
+      />
+      <Input
         name="name"
         label="Full name"
         required
@@ -112,6 +125,37 @@ const CreateAccountForm: React.FC = () => {
         error={errors.age}
         validate={value => calculateAge(value) >= 21 || 'You must be at least 21 years old'}
         type="date"
+      />
+      <Input
+        name="address"
+        label="Address 1"
+        required
+        register={register}
+        error={errors.address}
+        type="text"
+      />
+      <Input
+        name="address2"
+        label="Address 2"
+        register={register}
+        error={errors.address2}
+        type="text"
+      />
+      <Input
+        name="city"
+        label="City"
+        required
+        register={register}
+        error={errors.city}
+        type="text"
+      />
+      <Input
+        name="zipcode"
+        label="Zip code/ Postal code"
+        required
+        register={register}
+        error={errors.zipcode}
+        type="text"
       />
       <Input
         name="password"
