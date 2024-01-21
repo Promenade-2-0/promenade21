@@ -100,8 +100,10 @@ p {
 
 ul,
 ol {
-  padding-left: var(--base);
-  margin: 0 0 var(--base);
+  padding:0;
+  margin:0;
+  list-style: none;
+
 }
 
 a {
